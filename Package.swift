@@ -7,11 +7,11 @@ let package = Package(
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", .branch("nio")),
 
-        // 🔵 Swift ORM (queries, models, relations, etc) built on SQLite 3.
-        .package(url: "https://github.com/vapor/fluent-sqlite.git", .branch("nio")),
+        .package(url: "https://github.com/vapor/leaf.git", .branch("nio")),
+//        .package(url: "https://github.com/AutobahnSwift/Shuttle.git", .branch("master")),
     ],
     targets: [
-        .target(name: "App", dependencies: ["FluentSQLite", "Vapor"]),
+        .target(name: "App", dependencies: ["Vapor", "Leaf"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"]),
     ]

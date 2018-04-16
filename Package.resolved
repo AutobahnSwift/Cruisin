@@ -65,6 +65,15 @@
         }
       },
       {
+        "package": "Leaf",
+        "repositoryURL": "https://github.com/vapor/leaf.git",
+        "state": {
+          "branch": "nio",
+          "revision": "b4f384e15b5662e58e443f94d6d2adfb8d4924c1",
+          "version": null
+        }
+      },
+      {
         "package": "Routing",
         "repositoryURL": "https://github.com/vapor/routing.git",
         "state": {

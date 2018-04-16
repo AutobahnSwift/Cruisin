@@ -1,0 +1,36 @@
+
+#set("content") {
+
+<div class="container" style="text-align: center; max-width: 350px; padding-top: 20px;">
+#if(appIconUrl) {
+    <img class="appIcon" style="margin-bottom: 30px;" src="#(appIconUrl)" alt="340x340bb 80" />
+} else {
+    <div style="margin-bottom: 20px"></div>
+}
+
+#if(message) {
+    <p class="alert alert-#(messageType)">#(message)</p>
+} else {
+    <h4 class="" style="margin-bottom: 40px;">#(title)</h4>
+    <form style="text-align: left" onsubmit="didSubmit()" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="authenticityToken" value="#(formToken)" />
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" value="" class="form-control" placeholder="First Name" /><br />
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" value="" class="form-control" placeholder="Last Name" /><br />
+        <label class="required" for="email">Email Address:</label>
+        <input type="email" name="email" id="email" value="" class="form-control" placeholder="Email Address" /><br />
+
+        <br />
+        <input type="submit" name="commit" value="Get Beta Access" class="btn btn-lg btn-primary btn-block" id="submit" />
+    </form>
+}
+<p class="footer">
+Powered by <a href="https://github.com/AutobahnSwift/Shuttle" target="_blank">Shuttle</a>
+</p>
+</div>
+
+}
+
+#embed("base")
